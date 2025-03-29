@@ -1,4 +1,4 @@
-name: Build and Upload Script
+name: Format and Upload Script
 
 on:
   push:
@@ -27,7 +27,7 @@ jobs:
 
       # Upload the formatted input.sh as an artifact
       - name: Upload formatted script as artifact
-        uses: actions/upload-artifact@v2  # 使用上传 artifact 的 action
+        uses: actions/upload-artifact@v2  # 使用正确的版本
         with:
           name: formatted-script  # artifact 名称
           path: input.sh          # 上传的文件路径
