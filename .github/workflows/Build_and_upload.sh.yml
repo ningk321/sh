@@ -3,7 +3,7 @@ name: Format and Upload Script
 on:
   push:
     branches:
-      - main  # 触发条件：推送到 main 分支
+      - main  # 每次推送到 main 分支时触发
 
 jobs:
   format-and-upload:
@@ -12,7 +12,7 @@ jobs:
     steps:
       # Checkout the repository
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2  # 使用 actions/checkout@v2
 
       # Install shfmt for formatting
       - name: Install shfmt
