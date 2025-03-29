@@ -12,7 +12,7 @@ jobs:
     steps:
       # Checkout the repository
       - name: Checkout repository
-        uses: actions/checkout@v2  # 使用 actions/checkout@v2
+        uses: actions/checkout@v2  # 确保使用最新版本的 checkout
 
       # Install shfmt for formatting
       - name: Install shfmt
@@ -27,7 +27,7 @@ jobs:
 
       # Upload the formatted input.sh as an artifact
       - name: Upload formatted script as artifact
-        uses: actions/upload-artifact@v2  # 使用正确的版本
+        uses: actions/upload-artifact@v2.2.3  # 使用明确的版本号
         with:
           name: formatted-script  # artifact 名称
           path: input.sh          # 上传的文件路径
